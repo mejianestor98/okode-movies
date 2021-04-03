@@ -2,13 +2,13 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
-import { stringify } from '@angular/compiler/src/util';
 
 export enum SearchType {
   all = '',
   movie = 'movie',
   series = 'series',
-  episode = 'episodes'
+  episode = 'episodes',
+  game = 'game'
 };
 
 @Injectable({

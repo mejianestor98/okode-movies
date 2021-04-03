@@ -9,11 +9,11 @@ const routes: Routes = [
   },
   {
     path: 'movies',
-    loadChildren: './screens/movies-list/movies-list.module#MoviesListPageModule',
+    loadChildren: () => import('./pages/movies-list/movies-list.module').then( m => m.MoviesListPageModule),
   },
   {
     path: 'movies/:id',
-    loadChildren: './screens/movie-details/movie-details.module#MovieDetailsPageModule',
+    loadChildren: () => import('./pages/movie-details/movie-details.module').then( m => m.MovieDetailsPageModule),
   },
 ];
 
